@@ -1,18 +1,16 @@
 <?php
 
-namespace frontend\assets;
+namespace backend\assets_b;
 
 use yii\web\AssetBundle;
 
 /**
- * Main frontend application asset bundle.
+ * Main backend application asset bundle.
  */
 class AppAsset extends AssetBundle
 {
     public $basePath = '@webroot';
-    public $baseUrl = '@web';
-    public $baseUrl = '@web/frontend/web';
-
+    public $baseUrl = '@web/web';
     public $css = [
         'css/site.css',
     ];
