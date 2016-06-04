@@ -7,7 +7,7 @@ use yii\web\Controller;
 /**
  * Site controller
  */
-class SiteController extends Controller
+class SiteController extends ApiController
 {
 
     /**
@@ -21,12 +21,16 @@ class SiteController extends Controller
             ]
         ];
     }
+
     /**
      * @inheritdoc
      */
-    public function actionIndex(){
-        echo "ok";die;
-
+    public function actionIndex()
+    {
+        $this->msg = 'API';
+        $this->data = [
+            'app' => 'data'
+        ];
     }
 
 }

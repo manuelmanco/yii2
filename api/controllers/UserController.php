@@ -8,7 +8,7 @@ use common\models\User;
 
 
 /**
- * @author Eugene Terentev <eugene@terentev.net>
+ * @author Dung Phan Xuan<dungpx.s@gmail.com>
  */
 class UserController extends ApiController
 {

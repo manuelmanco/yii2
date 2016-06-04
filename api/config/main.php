@@ -1,11 +1,15 @@
 <?php
-
+$params = array_merge(
+    require(__DIR__ . '/../../common/config/params.php'),
+    require(__DIR__ . '/../../common/config/params-local.php'),
+    require(__DIR__ . '/params.php')
+);
 $requestParts = explode('/', ltrim($_SERVER['REQUEST_URI'], '/'));
 
 $config = [
+    'id' => 'app-api',
     'controllerNamespace' => 'api\controllers',
     'defaultRoute' => 'site/index',
-
     'components' => [
         'response' => [
             'format' => yii\web\Response::FORMAT_JSON,
@@ -24,7 +28,7 @@ $config = [
             'formatters' => [
                 \yii\web\Response::FORMAT_JSON => [
                     'class' => 'yii\web\JsonResponseFormatter',
-                    //'prettyPrint' => YII_DEBUG,
+                    'prettyPrint' => YII_DEBUG,
                 ],
             ],
 

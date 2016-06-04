@@ -5,10 +5,10 @@
 
 $cache = [
     'class' => 'yii\caching\FileCache',
-    'cachePath' => '@frontend/runtime/cache'
+    'cachePath' => '@api/runtime/cache'
 ];
 
-if (YII_ENV_DEV) {
+if (YII_DEBUG) {
     $cache = [
         'class' => 'yii\caching\DummyCache'
     ];
